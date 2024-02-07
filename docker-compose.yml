@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  tictactoe:
+    image: node:lts-alpine
+    container_name: tictactoe
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    command: sh -c "npm install && npm start"
